@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "vn.a2359media.hoanguyenminh.themoviedb"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation "androidx.core:core:${depVers.androidx}"
+    implementation "androidx.appcompat:appcompat:${depVers.x_appcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${depVers.x_constraintlayout}"
+    implementation "androidx.recyclerview:recyclerview:${depVers.x_appcompat}"
+    implementation "androidx.cardview:cardview:${depVers.x_cardview}"
+
+    // dagger
+    implementation "com.google.dagger:dagger:${depVers.dagger2}"
+    kapt "com.google.dagger:dagger-compiler:${depVers.dagger2}"
+    implementation "com.google.dagger:dagger-android-support:${depVers.dagger2}"
+    kapt "com.google.dagger:dagger-android-processor:${depVers.dagger2}"
+
+    //paging androidx
+//    implementation "androidx.paging:paging-rxjava2-ktx:${depVers.paging}"
+    implementation "androidx.paging:paging-runtime:${depVers.pagingx}"
+
+    implementation "androidx.lifecycle:lifecycle-extensions:${depVers.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:${depVers.lifecycle}"
+
+    implementation "com.github.bumptech.glide:glide:${depVers.glide}"
+    kapt "com.github.bumptech.glide:compiler:${depVers.glide}"
+
+    //logger
+    implementation "com.jakewharton.timber:timber:${depVers.timber}"
+}
