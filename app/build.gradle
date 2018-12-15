@@ -56,7 +56,6 @@ dependencies {
     //paging androidx
 //    implementation "androidx.paging:paging-rxjava2-ktx:${depVers.paging}"
     implementation "androidx.paging:paging-runtime:${depVers.pagingx}"
-
     implementation "androidx.lifecycle:lifecycle-extensions:${depVers.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-viewmodel:${depVers.lifecycle}"
 
