@@ -26,7 +26,7 @@ abstract class BasePagedListFragment<T : Any, VH : BaseViewHolder<T>> : BaseFrag
     lateinit var viewModel: BasePagedListViewModel<T>
     lateinit var adapter: BasePagedListAdapter<T, VH>
 
-    open fun getLayoutManager(): androidx.recyclerview.widget.RecyclerView.LayoutManager =
+    open fun getLayoutManager(): RecyclerView.LayoutManager =
         androidx.recyclerview.widget.LinearLayoutManager(
             context,
             androidx.recyclerview.widget.RecyclerView.VERTICAL,

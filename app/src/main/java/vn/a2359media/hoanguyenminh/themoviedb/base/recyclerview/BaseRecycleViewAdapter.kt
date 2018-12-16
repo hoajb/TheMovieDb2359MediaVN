@@ -1,7 +1,5 @@
 package vn.a2359media.hoanguyenminh.themoviedb.base.recyclerview
 
-import androidx.recyclerview.widget.RecyclerView
-
 /**
  * Created by Hoa Nguyen on 2018 November 11.
  *
