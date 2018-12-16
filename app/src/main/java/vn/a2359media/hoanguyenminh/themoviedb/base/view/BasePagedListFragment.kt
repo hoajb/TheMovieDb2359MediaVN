@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.paging.PagedList
-import com.app.seedin.structure.repository.NetworkState
 import kotlinx.android.synthetic.main.base_fragment_single_list.*
 import vn.a2359media.hoanguyenminh.themoviedb.R
 import vn.a2359media.hoanguyenminh.themoviedb.base.recyclerview.BasePagedListAdapter
 import vn.a2359media.hoanguyenminh.themoviedb.base.recyclerview.BaseViewHolder
+import vn.a2359media.hoanguyenminh.themoviedb.repository.NetworkState
 import vn.a2359media.hoanguyenminh.themoviedb.viewmodel.BasePagedListViewModel
 
 /**

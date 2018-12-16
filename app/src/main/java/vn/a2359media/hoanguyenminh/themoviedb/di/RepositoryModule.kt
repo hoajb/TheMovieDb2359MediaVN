@@ -6,7 +6,10 @@ import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import vn.a2359media.hoanguyenminh.themoviedb.repository.config.Config
+import vn.a2359media.hoanguyenminh.themoviedb.repository.remote.NetworkAPI
 
 /**
  * Created by Hoa Nguyen on 2018 Dec 14.
@@ -35,5 +38,19 @@ class RepositoryModule {
         return OkHttpClient.Builder()
             .addInterceptor(logging)
             .build()
+    }
+
+    @Provides
+    fun provideRetrofit(
+        client: OkHttpClient,
+        converter: GsonConverterFactory
+    ): NetworkAPI {
+        val builder = Retrofit.Builder()
+            .baseUrl(Config.BASE_HOST_URL)
+            .client(client)
+            .addConverterFactory(converter)
+            .build()
+
+        return builder.create(NetworkAPI::class.java)
     }
 }

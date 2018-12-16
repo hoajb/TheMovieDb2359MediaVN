@@ -18,7 +18,7 @@ open class BaseListReturnData<T> : BaseItems<T>() {
     @SerializedName("total_results")
     var totalResults: Int = 0
     @SerializedName("results")
-    var results: ArrayList<T> = emptyList<T>() as ArrayList<T>
+    var results: ArrayList<T> = ArrayList()
 
 
 }

@@ -5,9 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.app.seedin.structure.repository.config.Config
-import com.app.seedin.structure.repository.config.Config.Companion.API_KEY
 import retrofit2.Call
+import vn.a2359media.hoanguyenminh.themoviedb.repository.config.Config
+import vn.a2359media.hoanguyenminh.themoviedb.repository.config.Config.Companion.API_KEY
 import vn.a2359media.hoanguyenminh.themoviedb.repository.data.Listing
 import vn.a2359media.hoanguyenminh.themoviedb.repository.data.Movie
 import vn.a2359media.hoanguyenminh.themoviedb.repository.data.MovieList
@@ -58,7 +58,7 @@ class MainRepository @Inject constructor(private val networkAPI: NetworkAPI) {
         return apiResult
     }
 
-    fun createMoviesListDataSourceFactory()
+    private fun createMoviesListDataSourceFactory()
             : ItemDataSourceFactory<Movie, MovieList, ItemDataSource<Movie, MovieList>> {
         return object : ItemDataSourceFactory<Movie, MovieList, ItemDataSource<Movie, MovieList>>(networkAPI) {
             override fun createDataSource(networkApi: NetworkAPI): ItemDataSource<Movie, MovieList> {

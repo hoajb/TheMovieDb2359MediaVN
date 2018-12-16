@@ -2,8 +2,8 @@ package vn.a2359media.hoanguyenminh.themoviedb.base.recyclerview
 
 import android.view.View
 import android.widget.ImageView
-import com.app.seedin.R
-import vn.a2359media.hoanguyenminh.themoviedb.config.GlideApp
+import vn.a2359media.hoanguyenminh.themoviedb.R
+import vn.a2359media.hoanguyenminh.themoviedb.custom.GlideApp
 
 /**
  * Created by Hoa Nguyen on 2018 November 11.
@@ -11,7 +11,7 @@ import vn.a2359media.hoanguyenminh.themoviedb.config.GlideApp
  */
 
 abstract class BaseViewHolder<T : Any>(itemView: View, itemClickListener: ItemClickListener<T>? = null) :
-        androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
+    androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
     var clickListener: ItemClickListener<T>? = itemClickListener
 
@@ -31,10 +31,10 @@ abstract class BaseViewHolder<T : Any>(itemView: View, itemClickListener: ItemCl
 
     fun showImage(imageView: ImageView, url: String) {
         GlideApp.with(itemView.context)
-                .load(url)
-                .placeholder(R.mipmap.default_thumbnail_error)
-                .fitCenter()
-                .into(imageView)
+            .load(url)
+            .placeholder(R.mipmap.ic_error)
+            .fitCenter()
+            .into(imageView)
     }
 }
 

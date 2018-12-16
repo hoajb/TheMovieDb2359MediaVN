@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
-import com.app.seedin.R
+import vn.a2359media.hoanguyenminh.themoviedb.R
 import vn.a2359media.hoanguyenminh.themoviedb.repository.NetworkState
 import vn.a2359media.hoanguyenminh.themoviedb.repository.Status
 

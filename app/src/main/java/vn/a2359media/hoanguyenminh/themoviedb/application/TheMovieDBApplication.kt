@@ -11,6 +11,7 @@ import vn.a2359media.hoanguyenminh.themoviedb.di.DaggerAppComponent
 class TheMovieDBApplication : DaggerApplication() {
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
         return DaggerAppComponent.builder()
+            .application(this)
             .build()
     }
 

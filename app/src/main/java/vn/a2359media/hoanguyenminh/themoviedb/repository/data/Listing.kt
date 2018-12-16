@@ -2,7 +2,7 @@ package vn.a2359media.hoanguyenminh.themoviedb.repository.data
 
 import androidx.lifecycle.LiveData
 import androidx.paging.PagedList
-import com.app.seedin.structure.repository.NetworkState
+import vn.a2359media.hoanguyenminh.themoviedb.repository.NetworkState
 
 /**
  * Created by Hoa Nguyen on 2018 November 29.

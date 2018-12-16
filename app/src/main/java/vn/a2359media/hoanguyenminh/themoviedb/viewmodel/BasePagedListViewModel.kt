@@ -3,7 +3,7 @@ package vn.a2359media.hoanguyenminh.themoviedb.viewmodel
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.app.seedin.structure.repository.data.Listing
+import vn.a2359media.hoanguyenminh.themoviedb.repository.data.Listing
 
 /**
  * Created by Hoa Nguyen on Dec 05 2018.

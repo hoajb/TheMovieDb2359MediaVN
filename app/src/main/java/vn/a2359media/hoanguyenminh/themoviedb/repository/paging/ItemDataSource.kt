@@ -2,9 +2,9 @@ package vn.a2359media.hoanguyenminh.themoviedb.repository.paging
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
-import com.app.seedin.structure.repository.NetworkState
 import retrofit2.Call
 import retrofit2.Response
+import vn.a2359media.hoanguyenminh.themoviedb.repository.NetworkState
 import vn.a2359media.hoanguyenminh.themoviedb.repository.data.BaseItems
 import vn.a2359media.hoanguyenminh.themoviedb.repository.remote.NetworkAPI
 import java.io.IOException
