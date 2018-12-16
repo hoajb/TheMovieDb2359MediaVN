@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TheMovieDb2359MediaVN</string>
+    <string name="retry">Retry</string>
+    <string name="empty">Empty</string>
 </resources>

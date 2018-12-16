@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -19,6 +18,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
     }
 }
 
@@ -41,10 +51,16 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:${depVers.dagger2}"
     kapt "com.google.dagger:dagger-android-processor:${depVers.dagger2}"
 
+    //networking
+    implementation "com.squareup.okhttp3:logging-interceptor:${depVers.okhttp3}"
+    implementation "com.squareup.retrofit2:converter-gson:${depVers.retrofit}"
+    implementation "com.squareup.retrofit2:retrofit:${depVers.retrofit}"
+
+//    implementation "io.reactivex.rxjava2:rxandroid:${depVers.rxandroid2}"
+
     //paging androidx
 //    implementation "androidx.paging:paging-rxjava2-ktx:${depVers.paging}"
     implementation "androidx.paging:paging-runtime:${depVers.pagingx}"
-
     implementation "androidx.lifecycle:lifecycle-extensions:${depVers.lifecycle}"
     implementation "androidx.lifecycle:lifecycle-viewmodel:${depVers.lifecycle}"
 
