@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.paging.PagedList
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.base_fragment_single_list.*
 import vn.a2359media.hoanguyenminh.themoviedb.R
 import vn.a2359media.hoanguyenminh.themoviedb.base.recyclerview.BasePagedListAdapter
@@ -36,6 +37,12 @@ abstract class BasePagedListFragment<T : Any, VH : BaseViewHolder<T>> : BaseFrag
         adapter = createAdapter()
         recyclerView.layoutManager = getLayoutManager()
         recyclerView.adapter = adapter
+
+        createItemDecoration()?.let { recyclerView.addItemDecoration(it) }
+    }
+
+    open fun createItemDecoration(): RecyclerView.ItemDecoration? {
+        return null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

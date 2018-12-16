@@ -32,7 +32,7 @@ abstract class BaseViewHolder<T : Any>(itemView: View, itemClickListener: ItemCl
     fun showImage(imageView: ImageView, url: String) {
         GlideApp.with(itemView.context)
             .load(url)
-            .placeholder(R.mipmap.ic_error)
+            .error(R.mipmap.ic_error)
             .fitCenter()
             .into(imageView)
     }
